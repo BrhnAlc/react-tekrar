@@ -1,14 +1,28 @@
+import CardStyle from "../scss/Card.module.scss"
+
+const Card =({data})=>{
+  console.log(data);
+  return(
+    <div className={CardStyle.container}>
+    {data.map((item)=>{
+      const {id,name,img,job,comment}=item
+      return(
+        <div key={id} className={CardStyle.card}>
+       <h1>{name}</h1>
+       <h3>{job}</h3>
+       <p>{comment}</p>
+       <img src={img} alt="img" />
+       <div className={CardStyle.buttons}>
+        <button className={CardStyle.small}>Small</button>
+        <button className={CardStyle.large}>Large</button>
+       </div>
 
 
-import React from 'react'
-
-const Card = () => {
-  return (
-    <div>
-      
-      <h2>Card</h2>
-      </div>
+        </div>
+      )
+    })}
+    </div>
   )
 }
 
-export default Card
+export default Card;
