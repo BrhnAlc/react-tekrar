@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import './App.css';
+import LifeCycle from './components/LifeCycle';
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
 <button onClick={()=>setShow((show)=> !(show) )}>
 {show ? "Gizle" : " Göster"}
 </button>
+
+{show && <LifeCycle/>}
+
+
 <p className='read-the-docs'>Merhaba</p>
     </>
   );

@@ -1,10 +1,30 @@
+import { useEffect } from "react";
+import { useState } from "react"
 
 
-import React from 'react'
 
 const LifeCycle = () => {
+
+    const [ count, setCount] = useState(0);
+
+   useEffect(() => {
+     first
+   
+     return () => {
+       second
+     }
+   }, [third])
+   
   return (
-    <div>LifeCycle</div>
+    <div>
+        
+        
+        <button onClick={()=>setCount((count)=> count + 1)}>
+        count:{count}
+
+        </button>
+        
+        </div>
   )
 }
 
